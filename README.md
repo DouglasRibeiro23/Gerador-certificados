@@ -17,15 +17,17 @@ Projeto simples de usar e **fácil de testar** com `pytest`, seguindo as boas pr
 ---
 
 ## 📁 Estrutura do projeto
-
-├─ CERTIFICADOS-MINICURSOS.py # Script principal (com hífen; testes carregam por caminho)
-├─ participantes.xlsx # (exemplo, opcional)
-├─ Template capacitações.pptx # (exemplo, opcional)
-├─ certificados/ # Saída (criada em tempo de execução)
-└─ tests/
-   ├─ conftest.py # Fakes de python-pptx + fixtures
-   └─ test_certificados.py # Testes automatizados (pytest)
-
+.
+|-- CERTIFICADOS-MINICURSOS.py      # Script principal (com hífen; testes carregam por caminho)
+|-- README.md
+|-- requirements.txt       
+|-- Template capacitações.pptx      # Template dos certificados
+|-- participantes.xlsx              # Base usada para emitir os certificados (Dados dos alunos)
+|-- certificados/                   # Local que será gerado os certificados
+|   `-- .gitkeep
+`-- tests/
+    |-- conftest.py                 # Fakes de python-pptx + fixtures
+    `-- test_certificados.py        # Testes automatizados (pytest)
 
 **Observação**: o script tem hífen no nome. A suíte de testes já carrega o arquivo por **caminho absoluto** — não é necessário renomear.
 
